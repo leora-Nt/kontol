@@ -9,10 +9,7 @@ from config import (
 @Client.on_callback_query(filters.regex("cb_start"))
 async def start_op(_, query: CallbackQuery):
     await query.answer("Bot Started")
-    await query.edit_message_text(
-              f"""✨ **Hello** {message.from_user.mention()}\n
-💭 I am a selected Telegram Bot that can play high quality music in your group voice chat.**\n
-ℹ️ **Information for bot commands click » commands**""",
+    await query.edit_message_text(f"✨ **Hello** {message.from_user.mention()}\n\n💭 I am a selected Telegram Bot that can play high quality music in your group voice chat.**\n\nℹ️ **Information for bot commands click » commands**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -30,10 +27,7 @@ async def start_op(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("menuhelp_cb"))
 async def cbcmd(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""**This is the help menu for using this bot.
-
-All commands can be used using** /.""",
+    await query.edit_message_text(f"**This is the help menu for using this bot.\n\nAll commands can be used using** /.",
            reply_markup=InlineKeyboardMarkup(
            [
                 [
@@ -51,15 +45,7 @@ All commands can be used using** /.""",
 @Client.on_callback_query(filters.regex("adminhelp_cb"))
 async def cbcmd(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Admin :-
-
-» /skip - Skip the Song
-» /end - Stop Playing Music
-» /pause - Pause the track
-» /resume - Resumes the Track
-» /mute - Mute the Assistant
-
-🌀 Powered By : @tdrki_1**""",
+        f"""**Admin :-**\n\n» /skip - Skip the Song\n» /end - Stop Playing Music\n» /pause - Pause the track\n» /resume - Resumes the Track\n» /mute - Mute the Assistant",
            reply_markup=InlineKeyboardMarkup(
            [
                 [
@@ -71,15 +57,7 @@ async def cbcmd(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("playhelp_cb"))
 async def cbcmd(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""**Play :-
-
-» /play - (song name) 
-» /play - (song url) 
-» /play - (Reply Audio) 
-» /search - (song name)
-
-🌀 Powered By : @tdrki_1**""",
+    await query.edit_message_text(f"**Play :-**\n\n» /play - (song name) \n» /play - (song url) \n» /play - (Reply Audio) \n» /search - (song name)",
            reply_markup=InlineKeyboardMarkup(
            [
                 [
@@ -91,18 +69,7 @@ async def cbcmd(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("extrahelp_cb"))
 async def cbcmd(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""**Extra Commands :-
-
-» /ping - Shows the Ping Status
-» /start - Starts the Bot
-» /id - Get the ID
-» /repo - Get the source code 
-» /rmd - Clean all the downloads
-» /clean - Clean the Storage
-» /gcast - broadcast your message 
-
-🌀 Powered By : @tdrki_1**""",
+    await query.edit_message_text(f"**Extra Commands :-\n\n» /ping - Shows the Ping Status\n» /start - Starts the Bot\n» /id - Get the ID\n» /repo - Get the source code \n» /rmd - Clean all the downloads\n» /clean - Clean the Storage\n» /gcast - broadcast your message",
            reply_markup=InlineKeyboardMarkup(
            [
                 [
