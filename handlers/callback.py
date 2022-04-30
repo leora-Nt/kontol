@@ -10,7 +10,7 @@ from config import (
 async def start_op(_, query: CallbackQuery):
     await query.answer("Bot Started")
     await query.edit_message_text(
-              f"""✨ **Hello** {message.from_user.mention()}\n
+              f"""✨ **Hello** [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})\n
 💭 I am a selected Telegram Bot that can play high quality music in your group voice chat.**\n
 ℹ️ **Information for bot commands click » commands**""",
         reply_markup=InlineKeyboardMarkup(
@@ -26,6 +26,7 @@ async def start_op(_, query: CallbackQuery):
                 ],
             ]
         ),
+        disable_web_page_preview=True,
     )
 
 @Client.on_callback_query(filters.regex("menuhelp_cb"))
