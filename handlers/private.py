@@ -12,9 +12,7 @@ from config import (
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
-     await message.reply_photo(
-        photo=f"https://telegra.ph/file/13fba0e9d76c406ae9ce2.jpg",
-        caption=f"""✨ **Hello** {message.from_user.mention()}\n
+     await message.reply_text(f"""✨ **Hello** {message.from_user.mention()}\n
 💭 I am a selected Telegram Bot that can play high quality music in your group voice chat.**\n
 ℹ️ **Information for bot commands click » commands**""",
         reply_markup=InlineKeyboardMarkup(
@@ -30,7 +28,9 @@ async def start_(client: Client, message: Message):
                 ],
             ]
         ),
+        disable_web_page_preview=True,
     )
+
 
 
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
