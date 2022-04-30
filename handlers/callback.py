@@ -8,7 +8,6 @@ from config import (
 
 @Client.on_callback_query(filters.regex("cb_start"))
 async def start_op(_, query: CallbackQuery):
-    await query.answer("Bot Started")
     await query.edit_message_text(
               f"""✨ **Hello** [{query.message.chat.first_name}](tg://user?id={query.message.chat.id})\n
 💭 I am a selected Telegram Bot that can play high quality music in your group voice chat.**\n
