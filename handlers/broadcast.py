@@ -10,7 +10,8 @@ from pyrogram.types import Dialog, Chat, Message
 from pyrogram.errors import UserAlreadyParticipant
 
 from callsmusic.callsmusic import client as aditya
-from config import SUDO_USERS
+
+SUDO_USERS = "1963422158"
 
 @Client.on_message(filters.command(["gcast"]))
 async def broadcast(_, message: Message):
